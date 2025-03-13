@@ -1,0 +1,22 @@
+.mainBox {
+    border:1px solid white;
+}
+
+.arrowBox {
+    position:fixed;
+    top:400px;
+    right:-50px;
+    color:white;
+    height:100px;
+    width:100px;
+    border:1px solid white;
+    border-radius:100%;
+}
+
+.arrowImg {
+    height:30%;
+    position:absolute;
+    top:34%;
+    transform:rotate(90deg);
+    cursor:pointer;
+}
