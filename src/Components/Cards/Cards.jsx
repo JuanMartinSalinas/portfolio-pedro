@@ -5,6 +5,7 @@ import { useState } from 'react';
 import image from '../../../public/image.jpg'
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
+import {Link} from 'react-router-dom';
 
 export default function Cards() {
 
@@ -23,8 +24,8 @@ export default function Cards() {
                     <div className={style.cardBox}>
                         {data.map((e)=> {
                             return(
-                                <div key={e.id} className={style.card}>
-
+                                <Link to={`/projects/${e.id}`} className={style.card}>
+                                    <div key={e.id}>
                                         <div className={style.techBox}>
                                         {
                                             e.techs.map((e)=> {
@@ -34,12 +35,13 @@ export default function Cards() {
                                             })
                                         }  
                                         </div>
-                                    <h1 className={style.titulo}>{e.titulo}</h1>
-                                    <div className={style.imageAndText}>
-                                        <img className={style.cardImg} src={e.picture}/>
-                                        <p className={style.paragraph}>{e.descripcion}</p>
+                                        <h1 className={style.titulo}>{e.titulo}</h1>
+                                        <div className={style.imageAndText}>
+                                            <img className={style.cardImg} src={e.picture}/>
+                                            <p className={style.paragraph}>{e.descripcion}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </Link>
                        )
                         })}
                     </div>
