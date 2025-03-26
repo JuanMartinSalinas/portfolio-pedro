@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import {useState} from 'react';
 
 import styles from './Projects.module.css';
@@ -11,6 +11,8 @@ import graphic from '../../../public/logos/Graph_stroke.svg'
 import motion from '../../../public/logos/Motion_stroke.svg'
 import develop from '../../../public/logos/Develop_stroke.svg'
 
+import arrow from '../../assets/arrow.png'
+
 export default function Projects() {
 
     const {id} = useParams();
@@ -18,10 +20,12 @@ export default function Projects() {
 
     const [stack, setStack] = useState(project.techs);
 
-    console.log(stack);
 
     return(
         <>
+            <Link to="/">
+                <div className={styles.toMain}><img className={styles.arrow} src={arrow}/></div>
+            </Link>
             <div className={styles.mainBox}>
                 <div className={styles.headerBox}>
                     <h1 className={styles.title}>{project.titulo}</h1>
@@ -65,7 +69,7 @@ export default function Projects() {
                                                 <div className={styles.everySoftware}><img className={styles.imgSoft} src={photoshop} alt=""/></div>
                                                 <div className={styles.softwareDesc}>
                                                     <h3 className={styles.softwareName}>{e}</h3>
-                                                    <p className={styles.softwareInfo}>Yea perdonen kame hame ha después del tema de tetris viene el db rap quien no haya seguido esta serie</p>
+                                                    <p className={styles.softwareInfo}>Yea perdonen kame hame ha después del tema de tetris viene el db rap</p>
                                                 </div>
                                             </div>
                                         )
@@ -74,32 +78,47 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.collabMainBox}>
-                        <h2 className={styles.softwareTitle}>En colaboración con</h2>
-                        <div className={styles.collabs}>
-                            {/* {
-                                project.collabs.map((e) => {
-                                    return(
-                                        <div className={styles.everyCollab}>
 
-                                            <h3>{e}</h3>
-                                            <p>{e}</p>
-                                        </div>
-                                    )
-                                })
-                            } */}
-                        </div>
-                    </div>
-                    <div className={styles.workMainBox}>
-                        <h2 className={styles.softwareTitle}>Trabajando para</h2>
-                        <div>
-                            <div className={styles.workInfo}>
-                                <h3>Lagunas enterprise</h3>
-                                <p>Lorem ipsum</p>
+                    {project.collabs ? 
+                        <div className={styles.collabMainBox}>
+                            <h2 className={styles.softwareTitle}>En colaboración con</h2>
+                            <div className={styles.collabs}>
+                                {
+                                    project.collabs.map((e) => {
+                                        return(
+                                            <div className={styles.everyCollab}>
+                                                <div className={styles.collabSymbol}></div>
+                                                <div className={styles.collabBoxInfo}>
+                                                    <h3 className={styles.collabTitle}>{e}</h3>
+                                                    <p className={styles.collabDesc}>{e}</p>
+                                                </div>
+                                            </div>
+                                        )
+                                    })
+                                }
                             </div>
-                            <img src={project.picture} alt="a"/>
                         </div>
-                    </div>
+                        :
+                    null}
+
+                    {project.boss ?
+                        <div className={styles.workMainBox}>
+                            <h2 className={styles.softwareTitle}>Trabajando para</h2>
+                            <div className={styles.workingFor}>
+                                <div className={styles.workInfo}>
+                                    <h3 className={styles.workTitle}>Lagunas enterprise</h3>
+                                <div className={styles.imageAndPic}>
+                                    <p className={styles.workDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum tellus vitae ante molestie, et ornare magna laoreet. Vivamus bibendum venenatis leo, eget gravida massa gravida eu. Etiam finibus mollis purus, consectetur sollicitudin odio ullamcorper vel. Proin porta metus molestie quam ornare efficitur. Cras in dignissim mi. Pellentesque eget libero arcu. Donec vehicula mi sed faucibus iaculis. Nullam cursus nibh sit amet euismod tincidunt. Morbi ac iaculis augue. Curabitur tempus lacus nibh, id interdum sapien faucibus et. Integer in urna lacus. Integer id rhoncus sem. Nam bibendum sapien nec augue posuere condimentum.
+
+</p>
+                                    <img className={styles.imgWork} src={project.picture} alt="a"/>
+                                </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        :
+                    null}
                 </div>
             </div>
         </>

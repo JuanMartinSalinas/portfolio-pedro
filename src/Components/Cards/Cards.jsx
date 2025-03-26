@@ -7,14 +7,26 @@ import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import {Link} from 'react-router-dom';
 
+import useStore from '../../store.js'
+
 export default function Cards() {
 
     const [direction, setDirection] = useState(true);
+    const [filtered, setFiltered] = useState({
+        three:false,
+        photoshop:false,
+        graphic:false,
+        motion:false,
+        develop:false,
+    }) 
 
     function handleState() {
         setDirection(!direction);
         console.log(direction);
     }
+
+    const filter = useStore((state) => state.filters)
+
 
 
     return(

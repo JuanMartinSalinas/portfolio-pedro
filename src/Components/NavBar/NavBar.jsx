@@ -1,18 +1,45 @@
 import styles from './NavBar.module.css';
-import model from '../../../public/logos/3D_stroke.svg'
-import photoshop from '../../../public/logos/Photoshop_stroke.svg'
-import graphic from '../../../public/logos/Graph_stroke.svg'
-import motion from '../../../public/logos/Motion_stroke.svg'
-import develop from '../../../public/logos/Develop_stroke.svg'
+import model from '../../assets/NavIcons/three-d_Fill.svg'
+import photoshop from '../../assets/NavIcons/Photoshop_Fill.svg'
+import graphic from '../../assets/NavIcons/Graph_Fill.svg'
+import motion from '../../assets/NavIcons/Motion_Fill.svg'
+import develop from '../../assets/NavIcons/Develop_Fill.svg'
 
+import modelOut from '../../assets/NavIcons/three-d_Black.svg'
+import photoshopOut from '../../assets/NavIcons/Photoshop_Black.svg'
+import graphicOut from '../../assets/NavIcons/Graph_Black.svg'
+import motionOut from '../../assets/NavIcons/Motion_Black.svg'
+import developOut from '../../assets/NavIcons/Develop_Black.svg'
+
+import useStore from '../../store.js'
+
+import {useState,useEffect} from 'react';
 
 
 export default function NavBar() {
 
-    function filterModel() {
-        alert("xd")
-    }
+    const filters = useStore((state) => state.filters)
+    const updateFilters = useStore((state) => state.updateFilters)
 
+    const [clicked, setClicked] = useState({
+        three:false,
+        photoshop:false,
+        graphic:false,
+        motion:false,
+        develop:false,
+    });
+
+    function onClicking(prop) {
+        setClicked(prevState => ({
+            ...prevState,
+            [prop]: !prevState[prop]
+        }));
+        updateFilters
+    };
+
+    useEffect(() => {
+        console.log(updateFilters)
+    },[updateFilters])
 
     return(
         <>
@@ -21,7 +48,7 @@ export default function NavBar() {
             <div className={styles.mainBox}>
                 <div className={styles.navbarBox}>
 
-                <svg
+                {/* <svg
                     className={styles.svgElem}
                     id="Capa_1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,90 +139,61 @@ export default function NavBar() {
                         <text x="636" y="25" fontSize="18" fill="white">Develop</text>
                     </g>
 
-                </svg>
+                </svg> */}
 
-{/* 
-                    <div className={styles.allImages}>
-                        <img className={styles.imageNav} src={model} alt="3D model"/>
-                        <img className={styles.imageNav} src={photoshop} alt=""/>
-                        <img className={styles.imageNav} src={graphic} alt=""/>
-                        <img className={styles.imageNav} src={motion} alt=""/>
-                        <img className={styles.imageNav} src={develop} alt=""/>
-                    </div> */}
+                    <div className={styles.selectionBox}>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>3D Model</p>
+                            <div onClick={() => onClicking("three")} className={styles.imageBox}>
+                                <img className={styles.imageThree} src={clicked.three ? model : modelOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Photoshop</p>
+                            <div onClick={() => onClicking("photoshop")} className={styles.imageBox}>
+                                <img className={styles.imagePhotoshop} src={clicked.photoshop ? photoshop : photoshopOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Graph</p>
+                            <div onClick={() => onClicking("graphic")} className={styles.imageBox}>
+                                <img className={styles.imageGraph} src={clicked.graphic ? graphic : graphicOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Motion</p>
+                            <div onClick={() => onClicking("motion")} className={styles.imageBox}>
+                                <img className={styles.imageMotion} src={clicked.motion ? motion : motionOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Develop</p>
+                            <div onClick={() => onClicking("develop")} className={styles.imageBox}>
+                                <img className={styles.imageDevelop} src={clicked.develop ? develop :developOut}/>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div className={styles.backgroundBox}>
+                        <div className={styles.buttonsNav}>
+                            <div className={clicked.three ? styles.backgroundButtonsNavVisibleThree : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={clicked.photoshop ? styles.backgroundButtonsNavVisiblePhotoshop : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={clicked.graphic ? styles.backgroundButtonsNavVisibleGraphic : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={clicked.motion ? styles.backgroundButtonsNavVisibleMotion : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={clicked.develop ? styles.backgroundButtonsNavVisibleDevelop : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-
-
-
-
-{/* 
-                        <div className={styles.navbarEdgeLeft}></div>
-                        <div className={styles.selectionBox}>
-                            <div className={styles.buttonsNav}>
-                                <p className={styles.text}>3D Model</p>
-                                <div className={styles.imageBox}>
-                                    <img className={styles.imageItself} src={model}/>
-                                </div>
-                            </div>
-                            <div className={styles.buttonsNav}>
-                                <p className={styles.text}>Photoshop</p>
-                                <div className={styles.imageBox}>
-                                    <img className={styles.imageItself} src={photoshop}/>
-                                </div>
-                            </div>
-                            <div className={styles.buttonsNav}>
-                                <p className={styles.text}>Graphic</p>
-                                <div className={styles.imageBox}>
-                                    <img className={styles.imageItself} src={graphic}/>
-                                </div>
-                            </div>
-                            <div className={styles.buttonsNav}>
-                                <p className={styles.text}>Motion</p>
-                                <div className={styles.imageBox}>
-                                    <img className={styles.imageItself} src={motion}/>
-                                </div>
-                            </div>
-                            <div className={styles.buttonsNav}>
-                                <p className={styles.text}>Develop</p>
-                                <div className={styles.imageBox}>
-                                    <img className={styles.imageItself} src={develop}/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.navbarEdgeRight}></div> */}
-
-                        {/* <div className={styles.backgroundEdgeLeft}></div>
-                        <div className={styles.backgroundNav}>
-                            <div className={styles.backgroundButton}>
-                                <div className={styles.imageBackground}>
-                                </div>
-                            </div>
-                            <div className={styles.backgroundButton}>
-                                <div className={styles.imageBackground}>
-                                </div>
-                            </div>
-                            <div className={styles.backgroundButton}>
-                                <div className={styles.imageBackground}>
-                                </div>
-                            </div>
-                            <div className={styles.backgroundButton}>
-                                <div className={styles.imageBackground}>
-                                </div>
-                            </div>
-                            <div className={styles.backgroundButton}>
-                                <div className={styles.imageBackground}>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.backgroundEdgeRight}></div>
-
-                        */}
-
-
-
         </>
-    )
-}
+    );
+};
