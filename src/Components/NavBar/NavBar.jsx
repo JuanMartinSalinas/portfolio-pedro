@@ -19,7 +19,7 @@ import {useState,useEffect} from 'react';
 export default function NavBar() {
 
     const filters = useStore((state) => state.filters)
-    const updateFilters = useStore((state) => state.updateFilters)
+    const updateFilters = useStore((state) => state.toggleFilter)
 
     const [clicked, setClicked] = useState({
         three:false,
@@ -29,24 +29,89 @@ export default function NavBar() {
         develop:false,
     });
 
-    function onClicking(prop) {
-        setClicked(prevState => ({
-            ...prevState,
-            [prop]: !prevState[prop]
-        }));
-        updateFilters
-    };
+    function onClicking(props) {
+        updateFilters(props);
+        console.log(filters);
+    }
 
-    useEffect(() => {
-        console.log(updateFilters)
-    },[updateFilters])
+    // function onClicking(prop) {
+    //     setClicked(prevState => ({
+    //         ...prevState,
+    //         [prop]: !prevState[prop]
+    //     }));
+    //     updateFilters
+    //     console.log(clicked)
+    // };
+
+    // useEffect(() => {
+    //     console.log(filters)
+    // },[filters])
 
     return(
         <>
 
-
             <div className={styles.mainBox}>
                 <div className={styles.navbarBox}>
+
+                    <div className={styles.selectionBox}>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>3D Model</p>
+                            <div onClick={() => onClicking("three")} className={styles.imageBox}>
+                                <img className={styles.imageThree} src={filters.three ? model : modelOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Photoshop</p>
+                            <div onClick={() => onClicking("photoshop")} className={styles.imageBox}>
+                                <img className={styles.imagePhotoshop} src={filters.photoshop ? photoshop : photoshopOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Graph</p>
+                            <div onClick={() => onClicking("graphic")} className={styles.imageBox}>
+                                <img className={styles.imageGraph} src={filters.graphic ? graphic : graphicOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Motion</p>
+                            <div onClick={() => onClicking("motion")} className={styles.imageBox}>
+                                <img className={styles.imageMotion} src={filters.motion ? motion : motionOut}/>
+                            </div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <p className={styles.text}>Develop</p>
+                            <div onClick={() => onClicking("develop")} className={styles.imageBox}>
+                                <img className={styles.imageDevelop} src={filters.develop ? develop :developOut}/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.backgroundBox}>
+                        <div className={styles.buttonsNav}>
+                            <div className={filters.three ? styles.backgroundButtonsNavVisibleThree : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={filters.photoshop ? styles.backgroundButtonsNavVisiblePhotoshop : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={filters.graphic ? styles.backgroundButtonsNavVisibleGraphic : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={filters.motion ? styles.backgroundButtonsNavVisibleMotion : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                        <div className={styles.buttonsNav}>
+                            <div className={filters.develop ? styles.backgroundButtonsNavVisibleDevelop : styles.backgroundImageBoxHidden}></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </>
+    );
+};
+
+
+
 
                 {/* <svg
                     className={styles.svgElem}
@@ -140,60 +205,3 @@ export default function NavBar() {
                     </g>
 
                 </svg> */}
-
-                    <div className={styles.selectionBox}>
-                        <div className={styles.buttonsNav}>
-                            <p className={styles.text}>3D Model</p>
-                            <div onClick={() => onClicking("three")} className={styles.imageBox}>
-                                <img className={styles.imageThree} src={clicked.three ? model : modelOut}/>
-                            </div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <p className={styles.text}>Photoshop</p>
-                            <div onClick={() => onClicking("photoshop")} className={styles.imageBox}>
-                                <img className={styles.imagePhotoshop} src={clicked.photoshop ? photoshop : photoshopOut}/>
-                            </div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <p className={styles.text}>Graph</p>
-                            <div onClick={() => onClicking("graphic")} className={styles.imageBox}>
-                                <img className={styles.imageGraph} src={clicked.graphic ? graphic : graphicOut}/>
-                            </div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <p className={styles.text}>Motion</p>
-                            <div onClick={() => onClicking("motion")} className={styles.imageBox}>
-                                <img className={styles.imageMotion} src={clicked.motion ? motion : motionOut}/>
-                            </div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <p className={styles.text}>Develop</p>
-                            <div onClick={() => onClicking("develop")} className={styles.imageBox}>
-                                <img className={styles.imageDevelop} src={clicked.develop ? develop :developOut}/>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className={styles.backgroundBox}>
-                        <div className={styles.buttonsNav}>
-                            <div className={clicked.three ? styles.backgroundButtonsNavVisibleThree : styles.backgroundImageBoxHidden}></div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <div className={clicked.photoshop ? styles.backgroundButtonsNavVisiblePhotoshop : styles.backgroundImageBoxHidden}></div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <div className={clicked.graphic ? styles.backgroundButtonsNavVisibleGraphic : styles.backgroundImageBoxHidden}></div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <div className={clicked.motion ? styles.backgroundButtonsNavVisibleMotion : styles.backgroundImageBoxHidden}></div>
-                        </div>
-                        <div className={styles.buttonsNav}>
-                            <div className={clicked.develop ? styles.backgroundButtonsNavVisibleDevelop : styles.backgroundImageBoxHidden}></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </>
-    );
-};

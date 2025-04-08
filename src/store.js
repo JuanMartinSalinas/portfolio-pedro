@@ -8,7 +8,13 @@ const useStore = create((set) => ({
         motion:false,
         develop:false,
     },
-    updateFilter:() => set()
+    toggleFilter: (key) => set((state) => ({
+      filters: {
+        ...state.filters,
+        [key]: !state.filters[key],
+      }
+    })),
+
   }))
 
 

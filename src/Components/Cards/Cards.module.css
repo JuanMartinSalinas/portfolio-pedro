@@ -15,7 +15,6 @@
 }
 
 .cardBox {
-    border: 1px solid white;
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     grid-gap:40px;
@@ -183,7 +182,7 @@
         width:90%;
     }
         .aboutForm {
-            height:280px;
+            height:310px;
             width:90%;
             margin-top:2.5em;
             border:1px solid grey;
@@ -216,3 +215,20 @@
                     border-radius:5px;
                     padding:0.5em;
                 }
+
+            .button {
+                background-color:#0f0f3f;
+                color:white;
+                border:1px solid grey;
+                padding:0.5em;
+                margin-left:1.2em;
+                margin-top:0.2em;
+                border-radius:6px;
+                transition:ease-in-out 0.2s;
+                cursor:pointer;
+            }
+            .button:hover {
+                background-color: white;
+                color:#0f0f3f;
+                transition:ease-in-out 0.2s;
+            }
