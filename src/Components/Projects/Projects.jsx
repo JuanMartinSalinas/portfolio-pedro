@@ -2,10 +2,14 @@ import {Link, useParams} from 'react-router-dom';
 import {useState} from 'react';
 
 import styles from './Projects.module.css';
-
 import data from './../../data.js';
-
 import arrow from '../../assets/arrow.png'
+
+import model from '../../assets/logos/three-d_Black.svg'
+import photoshop from '../../assets/logos/Photoshop_Black.svg'
+import graphic from '../../assets/logos/Graph_Black.svg'
+import motion from '../../assets/logos/Motion_Black.svg'
+import develop from '../../assets/logos/Develop_Black.svg'
 
 export default function Projects() {
 
@@ -26,23 +30,24 @@ export default function Projects() {
                     <img className={styles.headerImg} src={project.picture} alt="Imagen del proyecto"/>
                     <div className={styles.techBox}>
                         <div className={styles.everyTech}>
-                            <div className={styles.techImgBox}><img className={stack.includes("logos/3D_Color.svg") ? styles.techImgOn : styles.techImgOff} src="/public/logos/3D_Stroke.svg" alt=""/></div>
+import model from '../../assets/logos/three-d_Black.svg'
+                            <div className={styles.techImgBox}><img className={stack.includes("logos/3D_Color.svg") ? styles.techImgOn : styles.techImgOff} src={model} alt=""/></div>
                             <p className={styles.techName}>3D Model</p>
                         </div>
                         <div className={styles.everyTech}>
-                            <div className={styles.techImgBox}><img className={stack.includes("logos/Photoshop_Color.svg") ? styles.techImgOn : styles.techImgOff} src="/public/logos/Photoshop_stroke.svg" alt=""/></div>
+                            <div className={styles.techImgBox}><img className={stack.includes("logos/Photoshop_Color.svg") ? styles.techImgOn : styles.techImgOff} src={photoshop} alt=""/></div>
                             <p className={styles.techName}>Photoshop</p>
                         </div>
                         <div className={styles.everyTech}>
-                            <div className={styles.techImgBox}><img className={stack.includes("logos/Graphic_Color.svg") ? styles.techImgOn : styles.techImgOff} src="/public/logos/Graph_stroke.svg" alt=""/></div>
+                            <div className={styles.techImgBox}><img className={stack.includes("logos/Graphic_Color.svg") ? styles.techImgOn : styles.techImgOff} src={graphic} alt=""/></div>
                             <p className={styles.techName}>Graphic</p>
                         </div>
                         <div className={styles.everyTech}>
-                            <div className={styles.techImgBox}><img className={stack.includes("logos/Motion_Color.svg") ? styles.techImgOn : styles.techImgOff} src="/public/logos/Motion_stroke.svg" alt=""/></div>
+                            <div className={styles.techImgBox}><img className={stack.includes("logos/Motion_Color.svg") ? styles.techImgOn : styles.techImgOff} src={motion} alt=""/></div>
                             <p className={styles.techName}>Motion</p>
                         </div>
                         <div className={styles.everyTech}>
-                            <div className={styles.techImgBox}><img className={stack.includes("logos/Develop_Color.svg") ? styles.techImgOn : styles.techImgOff} src="/public/logos/Develop_stroke.svg" alt=""/></div>
+                            <div className={styles.techImgBox}><img className={stack.includes("logos/Develop_Color.svg") ? styles.techImgOn : styles.techImgOff} src={develop} alt=""/></div>
                             <p className={styles.techName}>Develop</p>
                         </div>
                     </div>

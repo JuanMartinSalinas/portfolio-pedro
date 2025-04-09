@@ -26,19 +26,6 @@ export default function NavBar() {
         // console.log(filters);
     }
 
-    // function onClicking(prop) {
-    //     setClicked(prevState => ({
-    //         ...prevState,
-    //         [prop]: !prevState[prop]
-    //     }));
-    //     updateFilters
-    //     console.log(clicked)
-    // };
-
-    // useEffect(() => {
-    //     console.log(filters)
-    // },[filters])
-
     return(
         <>
 
