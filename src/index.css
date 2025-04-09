@@ -2,4 +2,7 @@ body {
   margin:0px;
   background-color:#000014;
   overflow-x:hidden;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }

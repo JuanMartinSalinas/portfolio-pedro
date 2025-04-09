@@ -76,8 +76,8 @@ export default function Cards() {
                             <div className={style.aboutImgBox}>
                                 <img className={style.aboutImg}  src={image} alt="imagen del más capo"/>
                                 <div className={style.aboutContactBox}>
-                                    <img className={style.contactButton} src={instagram}/>
-                                    <img className={style.contactButton} src={linkedin}/>    
+                                    <a href="https://www.instagram.com/pedroparnisari/"><img className={style.contactButton} src={instagram}/></a>
+                                    <a href="https://www.linkedin.com/in/pedroparnisari/"><img className={style.contactButton} src={linkedin}/></a>
                                     <button className={style.buttonContact} onClick={handleContact}>{contact ?  "Contáctame" : "Sobre mí"}</button>
                                 </div>
                             </div>
