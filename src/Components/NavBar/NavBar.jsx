@@ -20,15 +20,7 @@ export default function NavBar() {
 
     const filters = useStore((state) => state.filters)
     const updateFilters = useStore((state) => state.toggleFilter)
-
-    const [clicked, setClicked] = useState({
-        three:false,
-        photoshop:false,
-        graphic:false,
-        motion:false,
-        develop:false,
-    });
-
+    
     function onClicking(props) {
         updateFilters(props);
         console.log(filters);
@@ -54,33 +46,33 @@ export default function NavBar() {
                 <div className={styles.navbarBox}>
 
                     <div className={styles.selectionBox}>
-                        <div className={styles.buttonsNav}>
+                        <div onClick={() => onClicking("three")} className={styles.buttonsNav}>
                             <p className={styles.text}>3D Model</p>
-                            <div onClick={() => onClicking("three")} className={styles.imageBox}>
+                            <div className={styles.imageBox}>
                                 <img className={styles.imageThree} src={filters.three ? model : modelOut}/>
                             </div>
                         </div>
-                        <div className={styles.buttonsNav}>
+                        <div onClick={() => onClicking("photoshop")} className={styles.buttonsNav}>
                             <p className={styles.text}>Photoshop</p>
-                            <div onClick={() => onClicking("photoshop")} className={styles.imageBox}>
+                            <div className={styles.imageBox}>
                                 <img className={styles.imagePhotoshop} src={filters.photoshop ? photoshop : photoshopOut}/>
                             </div>
                         </div>
-                        <div className={styles.buttonsNav}>
+                        <div onClick={() => onClicking("graphic")}  className={styles.buttonsNav}>
                             <p className={styles.text}>Graph</p>
-                            <div onClick={() => onClicking("graphic")} className={styles.imageBox}>
+                            <div className={styles.imageBox}>
                                 <img className={styles.imageGraph} src={filters.graphic ? graphic : graphicOut}/>
                             </div>
                         </div>
-                        <div className={styles.buttonsNav}>
+                        <div onClick={() => onClicking("motion")} className={styles.buttonsNav}>
                             <p className={styles.text}>Motion</p>
-                            <div onClick={() => onClicking("motion")} className={styles.imageBox}>
+                            <div className={styles.imageBox}>
                                 <img className={styles.imageMotion} src={filters.motion ? motion : motionOut}/>
                             </div>
                         </div>
-                        <div className={styles.buttonsNav}>
+                        <div onClick={() => onClicking("develop")} className={styles.buttonsNav}>
                             <p className={styles.text}>Develop</p>
-                            <div onClick={() => onClicking("develop")} className={styles.imageBox}>
+                            <div className={styles.imageBox}>
                                 <img className={styles.imageDevelop} src={filters.develop ? develop :developOut}/>
                             </div>
                         </div>
