@@ -5,12 +5,6 @@ import styles from './Projects.module.css';
 
 import data from './../../data.js';
 
-import model from '../../../public/logos/3D_stroke.svg'
-import photoshop from '../../../public/logos/Photoshop_stroke.svg'
-import graphic from '../../../public/logos/Graph_stroke.svg'
-import motion from '../../../public/logos/Motion_stroke.svg'
-import develop from '../../../public/logos/Develop_stroke.svg'
-
 import arrow from '../../assets/arrow.png'
 
 export default function Projects() {
@@ -66,7 +60,7 @@ export default function Projects() {
                                     project.software.map((e) => {
                                         return(
                                             <div className={styles.softwareBox} key={e}>
-                                                <div className={styles.everySoftware}><img className={styles.imgSoft} src={photoshop} alt=""/></div>
+                                                <div className={styles.everySoftware}><img className={styles.imgSoft} src="/public/logos/3D_Stroke.svg" alt=""/></div>
                                                 <div className={styles.softwareDesc}>
                                                     <h3 className={styles.softwareName}>{e}</h3>
                                                     <p className={styles.softwareInfo}>Yea perdonen kame hame ha después del tema de tetris viene el db rap</p>
