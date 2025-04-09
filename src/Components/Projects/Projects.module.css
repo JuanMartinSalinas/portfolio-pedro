@@ -114,8 +114,8 @@
             margin-bottom:-20px;
         }
         .imgSoft {
-            height:40px;
-
+            min-height:30px;
+            max-height:50px;
         }
         .softwareName {
             margin-bottom:-10px;

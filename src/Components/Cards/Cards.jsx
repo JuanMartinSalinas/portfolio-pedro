@@ -6,6 +6,8 @@ import image from '../../../public/image.jpg'
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import {Link} from 'react-router-dom';
+import pfp from '../../assets/perfil.jpg'
+import pfp2 from '/favicon.png'
 
 import useStore from '../../store.js'
 
@@ -58,7 +60,7 @@ export default function Cards() {
                                         <h1 className={style.titulo}>{e.titulo}</h1>
                                         <div className={style.imageAndText}>
                                             <img className={style.cardImg} src={e.picture}/>
-                                            <p className={style.paragraph}>{e.descripcion}</p>
+                                            <p className={style.paragraph}>{e.descripcionShort}</p>
                                         </div>
                                     </div>
                                 </Link>
@@ -74,7 +76,7 @@ export default function Cards() {
 
                         <div className={style.aboutBox}>
                             <div className={style.aboutImgBox}>
-                                <img className={style.aboutImg}  src={image} alt="imagen del más capo"/>
+                                <img className={style.aboutImg} src={pfp2} alt="imagen del más capo"/>
                                 <div className={style.aboutContactBox}>
                                     <a href="https://www.instagram.com/pedroparnisari/"><img className={style.contactButton} src={instagram}/></a>
                                     <a href="https://www.linkedin.com/in/pedroparnisari/"><img className={style.contactButton} src={linkedin}/></a>
@@ -84,8 +86,7 @@ export default function Cards() {
                             <div className={style.aboutData}>
                                  <h1 className={style.aboutTitle}>Pedro Guillermo Parnisari</h1>
                                  <h2 className={style.aboutSubtitle}>Diseñador multimedial y comunicador digital</h2>
-                                 <p className={style.aboutParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec elit nisi. Proin aliquet varius massa hendrerit viverra. Sed accumsan maximus rhoncus. Fusce ullamcorper dictum auctor. Vivamus tincidunt consectetur erat, ut euismod nunc fermentum in. Aenean in porttitor odio. Aliquam erat volutpat. Mauris vestibulum feugiat lectus, vitae luctus ex dapibus vel. Etiam non neque ornare, dignissim turpis vitae, pharetra ipsum. Praesent maximus arcu at magna imperdiet, non fermentum felis ullamcorper. Morbi ultricies arcu quis ex rhoncus tempus.</p>
-
+                                 <p className={style.aboutParagraph}>Soy un diseñador multimedia con formación en Diseño Multimedia y Comunicación. Me destaco por mi precisión, creatividad y enfoque en la calidad,  asegurando soluciones innovadoras y efectivas. Soy altamente adaptable y  aprendo rápidamente nuevas tecnologías, siempre buscando ampliar mis conocimientos para enfrentar nuevos desafíos con dedicación y compromiso.</p>
                                  <form className={style.aboutForm} onSubmit={sendEmail}>
                                      <div className={style.dataForm}>
                                          <h3 className={style.contactTitle}>Estemos en contacto | Envíame un mensaje abajo</h3>

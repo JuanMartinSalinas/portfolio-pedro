@@ -30,6 +30,7 @@ export default function Projects() {
                     <img className={styles.headerImg} src={project.picture} alt="Imagen del proyecto"/>
                     <div className={styles.techBox}>
                         <div className={styles.everyTech}>
+
                             <div className={styles.techImgBox}><img className={stack.includes("logos/3D_Color.svg") ? styles.techImgOn : styles.techImgOff} src={model} alt=""/></div>
                             <p className={styles.techName}>3D Model</p>
                         </div>
@@ -56,7 +57,9 @@ export default function Projects() {
 
                 <div className={styles.bodyBox}>
                     <div className={styles.softwareMainBox}>
-                        <img className={styles.imgSoftware} src={project.picture} alt="a"/>
+                        <video className={styles.imgSoftware} controls>
+                            <source src={project.vid} type="video/mp4"></source>
+                        </video>
                         <div className={styles.softwareData}>
                             <h2 className={styles.softwareTitle}>Software utilizado</h2>
                             <div className={styles.softwareList}>
@@ -64,10 +67,10 @@ export default function Projects() {
                                     project.software.map((e) => {
                                         return(
                                             <div className={styles.softwareBox} key={e}>
-                                                <div className={styles.everySoftware}><img className={styles.imgSoft} src="/public/logos/3D_Stroke.svg" alt=""/></div>
+                                                <div className={styles.everySoftware}><img className={styles.imgSoft} src={e[2]} alt=""/></div>
                                                 <div className={styles.softwareDesc}>
-                                                    <h3 className={styles.softwareName}>{e}</h3>
-                                                    <p className={styles.softwareInfo}>Yea perdonen kame hame ha después del tema de tetris viene el db rap</p>
+                                                    <h3 className={styles.softwareName}>{e[0]}</h3>
+                                                    <p className={styles.softwareInfo}>{e[1]}</p>
                                                 </div>
                                             </div>
                                         )
