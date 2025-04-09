@@ -8,6 +8,7 @@ const useStore = create((set) => ({
         motion:false,
         develop:false,
     },
+    overflow:false,
     toggleFilter: (key) => set((state) => ({
       filters: {
         ...state.filters,
