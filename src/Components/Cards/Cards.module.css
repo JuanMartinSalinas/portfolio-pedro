@@ -113,6 +113,14 @@
     border-left:1px solid grey;
     padding-left:3em;
 }
+.aboutDataMobile {
+    width:100%;
+    padding:0px;
+    justify-content: center;
+    text-align: center;
+    display:none;
+}
+
     .aboutTitle {
         font-size:46px;
         letter-spacing: 2px;
@@ -392,6 +400,14 @@
         padding:0px;
         justify-content: center;
         text-align: center;
+        display:none;
+    }
+    .aboutDataMobile {
+        width:100%;
+        padding:0px;
+        justify-content: center;
+        text-align: center;
+        display:inline-block;
     }
         .aboutTitle {
             font-size:34px;
@@ -480,12 +496,6 @@
         filter:opacity(0);
     }
 
-    .aboutData {
-        width:100%;
-        border-left:0px;
-        padding-left:0em;
-    }
-
     .aboutForm {
         height:285px;
         width:100%;
@@ -555,8 +565,61 @@
         margin-top:-2em;
         justify-content:center;
         justify-items: center;
-        border:1px solid red;
         margin-left:2.4em;
+        margin-bottom:10em;
+    }
+    .card {
+        position:relative;
+        background-color: #3d3a3b;
+        border-radius: 7px;
+        width:140px;
+        height:160px;
+        cursor:pointer;
+        transition:ease-in-out 0.2s;
+        color:black;
+        text-decoration: none;
+    }
+    .paragraph {
+        text-align: left;
+        color:white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: lighter;
+        padding-bottom:1em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space:nowrap;
+        width:120px;
+        height:50px;
+        margin-top:0px;
+    }
+    .techBox {
+        position:absolute;
+        top:70px;
+        padding:0.5em;
+        width:100%;
+        margin-top:1.3em;
+    }
+        .techUsed {
+            z-index: 1;
+            position:relative;
+            height: 20px;
+            margin-top:0em;
+            margin-right:0.3em;
+            filter:saturate(0.7);
+        }
+}
+
+@media only screen and (max-width:320px) { 
+    .cardBox {
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+        grid-gap:15px 40px;
+        width:83%;
+        margin:0 auto;
+        margin-top:-2em;
+        justify-content:center;
+        justify-items: center;
+        margin-left:3.5em;
         margin-bottom:10em;
     }
     .card {

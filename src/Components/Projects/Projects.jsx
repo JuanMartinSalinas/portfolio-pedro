@@ -102,9 +102,7 @@ export default function Projects() {
                                 <div className={styles.workInfo}>
                                     <h3 className={styles.workTitle}>Lagunas enterprise</h3>
                                 <div className={styles.imageAndPic}>
-                                    <p className={styles.workDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum tellus vitae ante molestie, et ornare magna laoreet. Vivamus bibendum venenatis leo, eget gravida massa gravida eu. Etiam finibus mollis purus, consectetur sollicitudin odio ullamcorper vel. Proin porta metus molestie quam ornare efficitur. Cras in dignissim mi. Pellentesque eget libero arcu. Donec vehicula mi sed faucibus iaculis. Nullam cursus nibh sit amet euismod tincidunt. Morbi ac iaculis augue. Curabitur tempus lacus nibh, id interdum sapien faucibus et. Integer in urna lacus. Integer id rhoncus sem. Nam bibendum sapien nec augue posuere condimentum.
-
-</p>
+                                    <p className={styles.workDesc}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum tellus vitae ante molestie, et ornare magna laoreet. Vivamus bibendum venenatis leo, eget gravida massa gravida eu. Etiam finibus mollis purus, consectetur sollicitudin odio ullamcorper vel. Proin porta metus molestie quam ornare efficitur. Cras in dignissim mi. Pellentesque eget libero arcu. Donec vehicula mi sed faucibus iaculis. Nullam cursus nibh sit amet euismod tincidunt. Morbi ac iaculis augue. Curabitur tempus lacus nibh, id interdum sapien faucibus et. Integer in urna lacus. Integer id rhoncus sem. Nam bibendum sapien nec augue posuere condimentum.</p>
                                     <img className={styles.imgWork} src={project.picture} alt="a"/>
                                 </div>
                                 </div>
