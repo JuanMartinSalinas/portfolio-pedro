@@ -30,7 +30,6 @@ export default function Projects() {
                     <img className={styles.headerImg} src={project.picture} alt="Imagen del proyecto"/>
                     <div className={styles.techBox}>
                         <div className={styles.everyTech}>
-
                             <div className={styles.techImgBox}><img className={stack.includes("logos/3D_Color.svg") ? styles.techImgOn : styles.techImgOff} src={model} alt=""/></div>
                             <p className={styles.techName}>3D Model</p>
                         </div>
