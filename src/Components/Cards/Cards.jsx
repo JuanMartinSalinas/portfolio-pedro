@@ -2,12 +2,12 @@ import style from './Cards.module.css';
 import data from '../../data.js'
 import arrow from '../../assets/arrow.png'
 import { useEffect, useState } from 'react';
-import image from '../../../public/image.jpg'
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import {Link} from 'react-router-dom';
-import pfp from '../../assets/perfil.jpg'
 import pfp2 from '/favicon.png'
+
+import emailjs from '@emailjs/browser'
 
 import useStore from '../../store.js'
 
@@ -25,7 +25,7 @@ export default function Cards() {
 
     function sendEmail(e) {
         e.preventDefault();
-        alert("xd")
+        emailjs.sendForm('service_t3fif8m','template_mmt4518', e.target,'JOVVyY3QD4Q8xOeqa')
     }
 
     function handleContact() {
@@ -110,11 +110,11 @@ export default function Cards() {
                                         <form className={style.aboutForm} onSubmit={sendEmail}>
                                             <div className={style.dataForm}>
                                                 <h3 className={style.contactTitle}>Estemos en contacto | Envíame un mensaje abajo</h3>
-                                                <input type="email" className={style.inputEmail} placeholder="Tu correo electrónico"/>
-                                                <input type="text" className={style.inputTitle} placeholder="El título del correo"/>
+                                                <input name="email_from" type="email" className={style.inputEmail} placeholder="Tu correo electrónico"/>
+                                                <input name="email_header" type="text" className={style.inputTitle} placeholder="El título del correo"/>
                                             </div>
                                             <div className={style.messageForm}>
-                                                <textarea className={style.inputText} placeholder="Tu mensaje"/>
+                                                <textarea name="message" className={style.inputText} placeholder="Tu mensaje"/>
                                             </div>
                                             <button className={style.button} type="submit">Enviar correo</button>
                                         </form>
