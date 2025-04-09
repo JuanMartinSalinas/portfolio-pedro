@@ -23,9 +23,9 @@ export default function Cards() {
         // console.log(direction);
     }
 
-    function sendEmail(e) {
-        e.preventDefault();
+    const sendEmail = (e) => {
         emailjs.sendForm('service_t3fif8m','template_mmt4518', e.target,'JOVVyY3QD4Q8xOeqa')
+        alert("Mensaje enviado.")
     }
 
     function handleContact() {
