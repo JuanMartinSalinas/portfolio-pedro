@@ -410,13 +410,13 @@
         display:inline-block;
     }
         .aboutTitle {
-            font-size:34px;
+            font-size:32px;
             letter-spacing: 2px;
             margin-top:0.4em;
         }
         .aboutSubtitle {
             margin-top:0px;
-            font-size:20px;
+            font-size:16px;
             font-weight: lighter;
             letter-spacing: 2px;
     
@@ -501,7 +501,8 @@
         width:100%;
         margin:0 auto;
         margin-top:1em;
-        border:1px solid grey;
+        border:0px;
+        border-top:1px solid grey;
     }
 
         .contactTitle {
@@ -607,6 +608,11 @@
             margin-right:0.3em;
             filter:saturate(0.7);
         }
+
+    .aboutForm {
+        border:0px;
+        border-top:1px solid grey;
+    }
 }
 
 @media only screen and (max-width:320px) { 
@@ -661,4 +667,8 @@
             margin-right:0.3em;
             filter:saturate(0.7);
         }
+    .aboutForm {
+        border:0px;
+        border-top:1px solid grey;
+    }
 }

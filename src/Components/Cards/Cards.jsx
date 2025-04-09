@@ -12,7 +12,7 @@ import useStore from '../../store.js'
 export default function Cards() {
 
     const [direction, setDirection] = useState(false);
-    const [contact, setContact] = useState(false);
+    const [contact, setContact] = useState(true);
 
     const filter = useStore((state) => state.filters);
 

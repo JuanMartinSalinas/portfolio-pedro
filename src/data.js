@@ -7,10 +7,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
@@ -23,10 +23,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
@@ -39,10 +39,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
@@ -55,10 +55,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
@@ -71,10 +71,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
@@ -87,10 +87,10 @@ const data = [
         descripcion:"Suspendisse lacus purus, porttitor in pretium at, laoreet sit amet nunc. Integer eget vestibulum metus. Pellentesque rutrum quam et eros placerat iaculis. Proin a dolor nunc",
         picture:"/image.jpg",
         vid:"",
-        software:["segs","segs2.0","segs3nowispersonal"],
-        collabs:[["juancito","el capo"],["pedrito","el pibe cool"]],
+        software:["software 1","software 2","software 3"],
+        collabs:[["john","first"],["pedro","second"]],
         boss:{
-            bossName:"yeaperdonen",
+            bossName:"bossname",
             bossDesc:"lorem ipsum",
             bossImg:""
         }
