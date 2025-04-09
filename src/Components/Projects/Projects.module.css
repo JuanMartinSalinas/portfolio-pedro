@@ -238,7 +238,7 @@
 @media only screen and (max-width:480px) {
     .mainBox {
         color:white;
-        width:100%;
+        width:87%;
         margin:auto;
         margin-left:0.65em;
         padding:1em;
@@ -266,7 +266,7 @@
             letter-spacing:2px;
         }
         .headerImg {
-            width:100vw;
+            width:87vw;
             padding:0px;
         }
     
@@ -486,5 +486,24 @@
         width:30px;
         transform: rotate(90deg);
         transition:1s ease-in-out;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .mainBox {
+        color:white;
+        width:100%;
+        margin:auto;
+        margin-left:0.65em;
+        padding:1em;
+        background-color: #0f0f3f;
+        font-family: 'Bebas Neue';
+        font-weight:100;
+        margin-top:-3em;
+        border-radius: 7px;
+    }
+    .headerImg {
+        width:90vw;
+        padding:0px;
     }
 }
