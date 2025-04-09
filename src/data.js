@@ -1,7 +1,7 @@
 const data = [
     {
         id:1,
-        titulo:"London Trip",
+        titulo:"The London Trip",
         techList:["three","motion"],
         techs:["logos/3D_Color.svg","logos/Motion_Color.svg"],
         descripcionShort:"Este proyecto es una recreación estilizada de los monumentos más emblemáticos de Inglaterra, diseñada en 3D con un enfoque de miniatura.",

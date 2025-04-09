@@ -48,6 +48,11 @@ export default function Cards() {
                             return(
                                 <Link to={`/projects/${e.id}`} className={style.card}>
                                     <div key={e.id}>
+                                        <h1 className={style.titulo}>{e.titulo}</h1>
+                                        <div className={style.imageAndText}>
+                                            <img className={style.cardImg} src={e.picture}/>
+                                            <p className={style.paragraph}>{e.descripcionShort}</p>
+                                        </div>
                                         <div className={style.techBox}>
                                         {
                                             e.techs.map((e)=> {
@@ -56,11 +61,6 @@ export default function Cards() {
                                                 )
                                             })
                                         }  
-                                        </div>
-                                        <h1 className={style.titulo}>{e.titulo}</h1>
-                                        <div className={style.imageAndText}>
-                                            <img className={style.cardImg} src={e.picture}/>
-                                            <p className={style.paragraph}>{e.descripcionShort}</p>
                                         </div>
                                     </div>
                                 </Link>
