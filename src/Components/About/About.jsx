@@ -8,7 +8,7 @@ export default function About() {
 
     function handleClick() {
         setClick(!click);
-        console.log(click)
+        // console.log(click)
     }
 
     return(

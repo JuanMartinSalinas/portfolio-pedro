@@ -17,7 +17,7 @@ export default function Cards() {
 
     function handleDirection() {
         setDirection(!direction);
-        console.log(direction);
+        // console.log(direction);
     }
 
     function sendEmail(e) {

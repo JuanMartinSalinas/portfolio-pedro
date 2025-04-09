@@ -20,10 +20,10 @@ export default function NavBar() {
 
     const filters = useStore((state) => state.filters)
     const updateFilters = useStore((state) => state.toggleFilter)
-    
+
     function onClicking(props) {
         updateFilters(props);
-        console.log(filters);
+        // console.log(filters);
     }
 
     // function onClicking(prop) {
