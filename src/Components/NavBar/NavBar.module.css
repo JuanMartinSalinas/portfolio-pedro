@@ -205,7 +205,7 @@
         }
 
 
-@media only screen and (max-width:768) {
+@media only screen and (max-width:768px) {
     .buttonsNav {
         background-color: #0f0f3f;
         min-width:150px;
@@ -214,4 +214,171 @@
         margin-top:-0.3em;
         cursor: pointer;
     }
+}
+
+
+@media only screen and (max-width:480px) {
+    .selectionBox {
+        width:192%;
+        height:9vh;
+        display:flex;
+        background-color: #0f0f3f;
+        justify-content: center;
+        margin: 0 auto;
+        margin-left:1px;
+    }
+
+    .backgroundBox {
+        z-index: -1;
+        position:absolute;
+        width:102%;
+        height:10vh;
+        display:flex;
+        background-color: #0f0f3f;
+        justify-content: center;
+    }
+    .backgroundButtonsNav {
+        background-color: #0f0f3f;
+        min-width:150px;
+        margin-left:65px;
+        margin-right:35px;
+    }
+    .backgroundButtonsNavHidden {
+        position:absolute;
+        top:32px;
+        background-color: #0f0f3f;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(110%);
+        box-shadow: none;
+        transition: transform 0.8s ease-in-out, background-color 0.5s ease-in-out;
+        display:none;
+    }
+    .backgroundButtonsNavVisibleThree {
+        position:absolute;
+        top:35px;
+        left:31px;
+        background-color: #fdaf55;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(112%);
+        box-shadow:0px -20px 50px 20px #fdaf55;
+        transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+        display:none;
+    }
+    .backgroundButtonsNavVisiblePhotoshop {
+        position:absolute;
+        top:35px;
+        left:106px;
+        background-color: #f755fd;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(112%);
+        box-shadow:0px -20px 50px 20px #f755fd;
+        transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+        display:none;
+    }
+    .backgroundButtonsNavVisibleGraphic {
+        position:absolute;
+        top:32px;
+        background-color: #fdf255;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(112%);
+        box-shadow:0px -20px 50px 20px #fdf255;
+        transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+        display:none;
+    }
+    .backgroundButtonsNavVisibleMotion {
+        position:absolute;
+        top:32px;
+        background-color: #559efd;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(112%);
+        box-shadow:0px -20px 50px 20px #559efd;
+        transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+        display:none;
+    }
+    .backgroundButtonsNavVisibleDevelop {
+        position:absolute;
+        top:32px;
+        background-color: #55fd63;
+        border-radius:100%;
+        height:60px;
+        width:60px;
+        text-align: center;
+        transform:scale(112%);
+        box-shadow:0px -20px 50px 20px #55fd63;
+        transition: transform 0.5s ease-in-out, background-color 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+        display:none;
+    }
+
+    .text {
+        position:absolute;
+        z-index: 1;
+        margin-bottom: 0px;
+        height:60px;
+        width:60px;
+        font-size: 18px;
+        text-align:center;
+        margin:auto;
+        padding-top:1.5em;
+        padding-left:0;
+        transition:ease-in-out 0.2s;
+    }
+    
+    .buttonsNav {
+        background-color: #0f0f3f;
+        min-width:65px;
+        margin-left:5px;
+        margin-right:5px;
+        margin-top:-0.3em;
+        cursor: pointer;
+    }    
+        .imageBox {
+            position:absolute;
+            top:35px;
+            background-color: #0f0f3f;
+            border-radius:100%;
+            height:60px;
+            width:60px;
+            text-align: center;
+        }
+            .imageThree {
+                height:30px;
+                padding-top:0.5em;
+                filter:drop-shadow(0px 0px 4px #fdaf55);
+            }
+            .imagePhotoshop {
+                height:30px;
+                padding-top:0.5em;
+                filter:drop-shadow(0px 0px 4px #f755fd);
+            }
+            .imageGraph {
+                height:30px;
+                padding-top:0.5em;
+                filter:drop-shadow(0px 0px 4px #fdf255);
+            }
+            .imageMotion {
+                height:30px;
+                padding-top:0.5em;
+                filter:drop-shadow(0px 0px 4px #559efd);
+            }
+            .imageDevelop {
+                height:30px;
+                padding-top:0.5em;
+                filter:drop-shadow(0px 0px 4px #55fd63);
+            }
+            
 }
