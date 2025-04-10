@@ -105,7 +105,7 @@ export default function Cards() {
                                     <div>
                                         <h1 className={style.aboutTitle}>Pedro Guillermo Parnisari</h1>
                                         <h2 className={style.aboutSubtitle}>Diseñador multimedial y comunicador digital</h2>
-                                        <p className={style.aboutParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec elit nisi. Proin aliquet varius massa hendrerit viverra. Sed accumsan maximus rhoncus. Fusce ullamcorper dictum auctor. Vivamus tincidunt consectetur erat, ut euismod nunc fermentum in. Aenean in porttitor odio. Aliquam erat volutpat. Mauris vestibulum feugiat lectus, vitae luctus ex dapibus vel. Etiam non neque ornare, dignissim turpis vitae, pharetra ipsum. Praesent maximus arcu at magna imperdiet, non fermentum felis ullamcorper. Morbi ultricies arcu quis ex rhoncus tempus.</p>
+                                        <p className={style.aboutParagraph}>Soy un diseñador multimedia con formación en Diseño Multimedia y Comunicación. Me destaco por mi precisión, creatividad y enfoque en la calidad,  asegurando soluciones innovadoras y efectivas. Soy altamente adaptable y  aprendo rápidamente nuevas tecnologías, siempre buscando ampliar mis conocimientos para enfrentar nuevos desafíos con dedicación y compromiso.</p>
                                     </div> :
                                         <form className={style.aboutForm} onSubmit={sendEmail}>
                                             <div className={style.dataForm}>
