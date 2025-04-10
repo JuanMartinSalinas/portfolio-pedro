@@ -277,7 +277,7 @@
 
     .cardBox {
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap:15px 15px;
         width:83%;
         margin:0 auto;
@@ -292,7 +292,7 @@
         position:relative;
         background-color: #3d3a3b;
         border-radius: 7px;
-        width:170px;
+        width:100%;
         height:160px;
         cursor:pointer;
         transition:ease-in-out 0.2s;
@@ -303,19 +303,27 @@
         transform:scale(103%);
         transition:ease-in-out 0.2s;
     }
+    .imageAndText {
+        text-align:end;
+        margin:0px;
+        margin-top:-4em;
+        margin-right:1em;
+        height:120px;
+    }
         .cardImg { 
             z-index: 0;
             position: relative;
-            margin-top:3px;
-            border-radius: 10px;
-            height:50px;
-            display:none;
+            margin-top:0px;
+            border-radius: 0px;
+            height:120px;
+            width:120px;
+            object-fit: cover;
+            border-radius:6px;
         }
         .titulo {
             z-index: 1;
             font-family: 'Bebas Neue';
             font-weight: lighter;
-
             position:relative;
             bottom:10px;
             background-color: transparent;
@@ -324,29 +332,26 @@
             padding-left:0.25em;
             padding-right:0.4em;
         }
-        .imageAndText {
-            text-align: center;
-            margin:12px;
-        }
         .paragraph {
             text-align: left;
             color:white;
             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: lighter;
             padding-bottom:1em;
+            padding-left:0.5em;
             text-overflow: ellipsis;
             overflow: hidden;
             white-space:nowrap;
-            width:150px;
+            width:190px;
             height:50px;
-            margin-top:0px;
+            margin-top:-60px;
         }
         .techBox {
             position:absolute;
-            top:70px;
+            top:45px;
             padding:0.5em;
             width:100%;
-            margin-top:1.3em;
+            margin-top:0em;
         }
             .techUsed {
                 z-index: 1;
@@ -573,7 +578,7 @@
 @media only screen and (max-width:375px) { 
     .cardBox {
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap:15px 15px;
         width:83%;
         margin:0 auto;
@@ -587,33 +592,68 @@
         position:relative;
         background-color: #3d3a3b;
         border-radius: 7px;
-        width:140px;
-        height:160px;
+        width:100%;
+        height:145px;
         cursor:pointer;
         transition:ease-in-out 0.2s;
         color:black;
         text-decoration: none;
     }
-    .paragraph {
-        text-align: left;
-        color:white;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-weight: lighter;
-        padding-bottom:1em;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space:nowrap;
-        width:120px;
-        height:50px;
-        margin-top:0px;
+    .card:hover {
+        transform:scale(103%);
+        transition:ease-in-out 0.2s;
     }
-    .techBox {
-        position:absolute;
-        top:70px;
-        padding:0.5em;
-        width:100%;
-        margin-top:1.3em;
+    .imageAndText {
+        text-align:end;
+        margin:0px;
+        margin-top:-4em;
+        margin-right:1em;
+        height:120px;
     }
+        .cardImg { 
+            z-index: 0;
+            position: relative;
+            margin-top:0px;
+            border-radius: 0px;
+            height:120px;
+            width:120px;
+            object-fit: cover;
+            border-radius:6px;
+        }
+        .titulo {
+            z-index: 1;
+            font-family: 'Bebas Neue';
+            font-weight: lighter;
+            position:relative;
+            bottom:10px;
+            background-color: transparent;
+            color:white;
+            padding:0em;
+            padding-left:0.25em;
+            padding-right:0.4em;
+            font-size:28px;
+        }
+        .paragraph {
+            text-align: left;
+            color:white;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: lighter;
+            padding-bottom:1em;
+            padding-left:0.5em;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space:nowrap;
+            width:160px;
+            height:50px;
+            margin-top:-60px;
+        }
+        .techBox {
+            position:absolute;
+            top:45px;
+            padding:0.5em;
+            width:100%;
+            margin-top:0em;
+        }
         .techUsed {
             z-index: 1;
             position:relative;
@@ -632,7 +672,7 @@
 @media only screen and (max-width:320px) { 
     .cardBox {
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
         grid-gap:15px 40px;
         width:83%;
         margin:0 auto;
@@ -646,8 +686,8 @@
         position:relative;
         background-color: #3d3a3b;
         border-radius: 7px;
-        width:140px;
-        height:160px;
+        width:100%;
+        height:145px;
         cursor:pointer;
         transition:ease-in-out 0.2s;
         color:black;
@@ -662,16 +702,16 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space:nowrap;
-        width:120px;
+        width:150px;
         height:50px;
-        margin-top:0px;
+        margin-top:-50px;
     }
     .techBox {
         position:absolute;
-        top:70px;
+        top:45px;
         padding:0.5em;
         width:100%;
-        margin-top:1.3em;
+        margin-top:0em;
     }
         .techUsed {
             z-index: 1;
